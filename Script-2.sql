@@ -1,4 +1,6 @@
 
+
+-----QUERY PRACTICE---------
 --Select all records from the Employee table.
 select * from "Employee"; 
 
@@ -27,13 +29,33 @@ select * from "Invoice" where "Total" between 15 and 50;
 --Select all employees hired between 1st of June 2003 and 1st of March 2004
 select * from "Employee" where "HireDate" between '2003-06-01' and '2004-03-01';
 
------INSERT PRACTICES---------
+-----INSERT PRACTICE---------
+
 --Insert two new records into Genre table
 insert into "Genre" ("GenreId" , "Name") Values (11, 'Hip Hop'), (12, 'Reggae');
 
 --Insert two new records into Employee table
-insert into "Employee" ("EmployeeId" , "FirstName" , "LastName") values (21 , 'Tim', 'Morris'), (22, '')
-  
+insert into "Employee" ("CustomerId" , "FirstName" , "LastName", "Email")
+ values 
+ (21 , 'Tim', 'Morris'), 
+ (22, 'Maha', 'Chan');
+
+--Insert two new records into Customer table
+
+insert into "Customer" ("CustomerId" , "FirstName" , "LastName" "Email")
+ values 
+ (21 , 'Tim', 'Morris','timmorris@abc.com'), 
+ (22, 'Maha' 'Chan','mahchan@efh.com');
+
+ ----------UPDATE PRACTICE---------------
+
+ --Update Aaron Mitchell in Customer table to Robert Walter
+
+ update "Customer" set "FirstName" = 'Robert', "LastName = 'Walter"
+ where "FirstName" = 'Aaron' and "LastName" = 'Mitchell';
+
+ --Update name of artist in the Artist table “Creedence Clearwater Revival” to “CCR”
+ update "Artist" set "Name" = 'CCR' where "Name" = 'Creedence Clearwater Revival';
 
 
 
